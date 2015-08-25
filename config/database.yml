@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: <%= ENV['DEV_DB_NAME'] %>
+  pool: 5
+  username: <%= ENV['DEV_DB_USERNAME'] %>
+  password: <%= ENV['DEV_DB_PASSWORD'] %>
+  template: template0
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database:  <%= ENV['TEST_DB_NAME'] %>
+  pool: 5
+  username: <%= ENV['TEST_DB_USERNAME'] %>
+  password:  <%= ENV['TEST_DB_PASSWORD'] %>
+  template: template0
