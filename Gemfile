@@ -50,3 +50,13 @@ end
 gem 'figaro'
 #pg db
 gem 'pg'
+
+
+# twitter bootstrap css & javascript toolkit
+gem "therubyracer"
+gem "less-rails"
+gem 'twitter-bootswatch-rails', :github => 'scottvrosenthal/twitter-bootswatch-rails'
+
+# twitter bootstrap helpers gem, e.g., alerts etc...
+gem 'twitter-bootswatch-rails-helpers'
+gem 'twitter-bootswatch-rails-fontawesome', :git => 'git://github.com/scottvrosenthal/twitter-bootswatch-rails-fontawesome.git'
