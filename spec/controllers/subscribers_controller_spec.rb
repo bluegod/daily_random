@@ -9,6 +9,11 @@ describe SubscribersController, type: :controller do
       expect(response).to be_success
     end
 
+    it "should get the subscription new page" do
+      get 'new'
+      expect(response).to be_success
+    end
+
     it "should create a new subscription" do
       expect{
         post :create, subscriber: {email: test_email}
