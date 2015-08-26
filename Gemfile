@@ -44,6 +44,8 @@ group :development, :test do
 
   #rspec testing framework
   gem 'rspec-rails', '~> 3.0'
+
+  gem 'factory_girl_rails'
 end
 
 #config env
