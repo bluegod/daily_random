@@ -1,12 +1,14 @@
 <%= form_for @subscriber do |f| %>
   <div class="form-group">
-    <%= f.label :email, :class => 'control-label' %>
-    <%= f.text_field :email, :class => 'form-control' %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                subscribers_path, :class => 'btn' %>
+    <div class="container">
+      <div class="row">
+    <span class="col-lg-offset-4 col-lg-3 col-centered text-center no-left-right-pad">
+      <%= f.text_field :email, :class => 'form-control', :placeholder => 'Your e-mail'%>
+      </span>
+    <span class="input-group-btn col-lg-6 text-center no-left-right-pad">
+      <%= f.submit 'Yes, subscribe!', :class => 'btn btn-primary' %>
+      </span>
+      </div>
+    </div>
   </div>
 <% end %>

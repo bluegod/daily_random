@@ -16,10 +16,9 @@
       <tr>
         <td><%= link_to subscriber.id, subscriber_path(subscriber) %></td>
         <td><%= subscriber.email %></td>
-        <td><%=l subscriber.created_at %></td>
+        <td><%= subscriber.created_at.to_s(:db) %></td>
         <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_subscriber_path(subscriber), :class => 'btn btn-primary btn-xs' %>
+
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       subscriber_path(subscriber),
                       :method => :delete,

@@ -1,6 +1,12 @@
 <%- model_class = Subscriber -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => t('helpers.titles.new', :model => model_class.model_name.human,
-                                 :default => "New #{model_class.model_name.human}") %></h1>
+
+<div class="text-center daily-header">
+  Let's get your daily randomness!
 </div>
-<%= render :partial => 'form' %>
+
+<div class="container">
+  <div class="row row-centered">
+    <%= render :partial => 'form' %>
+  </div>
+  <p class="text-muted footer"><i class="fa fa-random"></i> Randomly made by <%=link_to 'James Lopez', 'http://jameslopez.es' %>.</p>
+</div>

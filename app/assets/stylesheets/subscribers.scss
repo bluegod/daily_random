@@ -1,3 +1,28 @@
 // Place all the styles related to the Subscribers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
+
+$back-color: #74AFAD;
+
+body {
+  background-color: $back-color;
+}
+
+.daily-header {
+  margin-top: 10%;
+  font-family: 'Shadows Into Light', cursive;
+  margin-bottom: 10%;
+  font-size: 10.0vh;
+}
+
+.no-left-right-pad{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 39%;
+}
