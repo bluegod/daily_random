@@ -53,6 +53,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  resources :subscribers, :only => [:index, :create, :new]
+  resources :subscribers, :only => [:index, :create, :new, :destroy]
   root 'subscribers#new'
 end
