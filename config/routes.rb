@@ -59,5 +59,7 @@ Rails.application.routes.draw do
 
   resources :subscribers, :only => [:index, :create, :new, :destroy]
   root 'subscribers#new'
-  mount  Qless::Server.new(Qless::Client.new) => '/jobs'
+  if !Rails.env.test?
+    mount  Qless::Server.new(Qless::Client.new) => '/jobs'
+  end
 end
