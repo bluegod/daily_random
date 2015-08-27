@@ -20,7 +20,7 @@ DailyRandom uses a number of projects to work properly:
 $ git clone [git@github.com:bluegod/daily_random.git] daily_random
 $ cd daily_random
 $ bundle install
-$ rake db:setup #make sure db:seed is run while Redis is running!
+$ rake db:setup #make sure db:seed runs after the next config step and while Redis is running!
 ```
 
 Copy config/application.example.yml to config/application.yml and edit accordingly.
