@@ -36,6 +36,13 @@ $ rails s #or your favourite web server
 ```
 Access the app at: localhost:3000
 
+### Testing/Specs
+
+Can be run using:
+```sh
+$ rspec spec
+```
+
 ### Todo's
 
 * Write integration tests
