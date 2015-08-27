@@ -68,3 +68,4 @@ gem 'redis'
 
 #queue system for jobs
 gem 'qless', github: 'seomoz/qless'
+gem 'sinatra' #needed for qless web interface

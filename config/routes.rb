@@ -53,6 +53,11 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  require 'qless'
+  require 'qless/server'
+
+
   resources :subscribers, :only => [:index, :create, :new, :destroy]
   root 'subscribers#new'
+  mount  Qless::Server.new(Qless::Client.new) => '/jobs'
 end
