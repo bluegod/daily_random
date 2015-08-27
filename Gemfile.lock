@@ -16,6 +16,13 @@ GIT
       less-rails (~> 2.4)
       railties (>= 3.1, < 5.0)
 
+GIT
+  remote: git://github.com/seomoz/qless.git
+  revision: 5e7a2204419e7edf5625a24e0eced0f4f41f6c19
+  specs:
+    qless (0.10.0.pre2)
+      redis (>= 2.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -138,6 +145,7 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    redis (3.2.1)
     ref (2.0.0)
     rspec-core (3.3.0)
       rspec-support (~> 3.3.0)
@@ -207,7 +215,9 @@ DEPENDENCIES
   jquery-rails
   less-rails
   pg
+  qless!
   rails (= 4.2.1)
+  redis
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

@@ -62,3 +62,9 @@ gem 'twitter-bootswatch-rails', :github => 'scottvrosenthal/twitter-bootswatch-r
 # twitter bootstrap helpers gem, e.g., alerts etc...
 gem 'twitter-bootswatch-rails-helpers'
 gem 'twitter-bootswatch-rails-fontawesome', :git => 'git://github.com/scottvrosenthal/twitter-bootswatch-rails-fontawesome.git'
+
+#redis db
+gem 'redis'
+
+#queue system for jobs
+gem 'qless', github: 'seomoz/qless'
