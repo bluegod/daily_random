@@ -10,6 +10,7 @@
 DailyRandom uses a number of projects to work properly:
 * Redis
 * postgreSQL
+* Bundler
 * Ruby (tested on v2.1.2)
 
 ### Installation
@@ -17,6 +18,7 @@ DailyRandom uses a number of projects to work properly:
 ```sh
 $ git clone [git@github.com:bluegod/daily_random.git] daily_random
 $ cd daily_random
+$ bundle install
 ```
 
 Copy config/application.example.yml to config/application.yml and edit accordingly.
