@@ -1,0 +1,30 @@
+# Add configuration values here, as shown below.
+#
+# pusher_app_id: "2954"
+# pusher_key: 7381a978f7dd7f9a1117
+# pusher_secret: abdc3b896a0ffb85d373
+# stripe_api_key: sk_test_2J0l093xOyW72XUYJHE4Dv2r
+# stripe_publishable_key: pk_test_ro9jV5SNwGb1yYlQfzG17LHK
+#
+# production:
+#   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
+#   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
+
+default_subject: 'Your Daily Random'
+
+development:
+  SECRET_KEY_BASE: ec2a28e7162832e2e879cc59b2c84eebc4e624922d3a615c68e7fb6e173663bf112c6d249da12bdbfc80742dc6a8887befc7eb15c596cfe9b7e1ea67099c4ccb
+  DEV_DB_NAME: 'daily_random_dev'
+  DEV_DB_USERNAME: 'my_user'
+  DEV_DB_PASSWORD: 'my_password'
+  default_queue: 'test'
+  batch_size: '20'
+
+
+test:
+  SECRET_KEY_BASE: 95a2c4c354c50b41aa0b5a98cb15f27e2e934299b38d0572024bc5a9b12f0591517c85ed8ae7cbdc2860b6cfaa82c2f51be4d1b00e0afe9691e4ef6ecc171955
+  TEST_DB_NAME: 'daily_random_test'
+  TEST_DB_USERNAME: 'my_user'
+  TEST_DB_PASSWORD: 'my_password'
+  default_queue: 'test'
+  batch_size: '20'
