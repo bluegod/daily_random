@@ -37,7 +37,7 @@ _If we have to run this again, another job would get created so we may need to c
     #add recurring daily job
     #queue.recur(DailyQuoteManager, {}, 3600*24)
 ```   
-_The time the job it runs can also be change. We could also delete the main scheduled job from the jobs page (see Admin section)_
+_The time the job runs can also be changed. We could also delete the main scheduled job from the jobs page (see Admin section)_
 
 In another tab:
 ```sh
