@@ -29,7 +29,7 @@ class SubscribersController < ApplicationController
     else
       flash[:success]  = 'Subscriber removed.'
     end
-    redirect_to subscribers_path
+    redirect_to root_path
   end
 
   private
