@@ -1,9 +1,10 @@
 require "redis"
+require 'config/daily_cached'
 
 #storage of quotes in redis
 class LocalQuoteFactory
   def initialize
-    @redis = Redis.new
+    @redis = DailyCached.redis
   end
 
   def get(random_array)

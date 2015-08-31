@@ -8,7 +8,7 @@
 require 'net/http'
 require 'json'
 require "redis"
-
+require 'config/daily_cached'
 
 def fortune_key(index)
   "local:#{index}"
@@ -17,7 +17,7 @@ end
 uri = URI('http://fortunecookieapi.com/v1/fortunes')
 response = Net::HTTP.get uri
 fortunes = JSON.parse response
-@redis = Redis.new
+@redis = DailyCached.redis
 @redis.pipelined do
   fortunes.each_with_index do |fortune, index|
     @redis.set(fortune_key(index), fortune['message'])

@@ -1,4 +1,5 @@
 require 'rake'
+require 'config/daily_cached'
 
 namespace :jobs do
   desc "Run a Qless worker"
@@ -13,7 +14,7 @@ namespace :jobs do
     require 'qless/worker'
 
     # Create a client
-    client = Qless::Client.new
+    DailyCached.qless
 
     # Get the queue
     queue = client.queues[ENV['default_queue']]
@@ -40,7 +41,7 @@ namespace :jobs do
     require 'qless'
 
     # Create a client
-    client = Qless::Client.new
+    DailyCached.qless
 
     # Get the queue
     queue = client.queues[ENV['default_queue']]

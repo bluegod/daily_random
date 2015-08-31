@@ -1,6 +1,7 @@
 require 'qless'
 require 'quotes/random_quote'
 require 'jobs/daily_sender'
+require 'config/daily_cached'
 
 class DailyQuoteManager
   #Added daily sender jobs to the queue in batches of subscribers
@@ -22,7 +23,7 @@ class DailyQuoteManager
   end
 
   def self.client
-    @_client ||= Qless::Client.new
+    DailyCached.qless
   end
 end
 
