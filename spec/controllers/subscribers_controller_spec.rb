@@ -5,6 +5,10 @@ describe SubscribersController, type: :controller do
   let(:invalid_email) {'@invalid'}
   let!(:subscriber) {create(:subscriber)}
 
+  before(:each) do
+    request.env['HTTP_AUTHORIZATION'] = ActionController::HttpAuthentication::Basic.encode_credentials(ENV['ADMIN_USER'], ENV['ADMIN_PASS'])
+  end
+
   it "should get the subscription index page" do
     get 'index'
     expect(response).to be_success

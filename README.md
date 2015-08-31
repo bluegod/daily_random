@@ -26,10 +26,11 @@ $ rake db:setup #this should run after the next config step and while Redis is r
 Copy config/application.example.yml to config/application.yml and edit accordingly.
 Edit config/environments/development.rb to use your own e-mail settings. See [http://guides.rubyonrails.org/configuring.html#configuring-action-mailer]
 
-Also, run the scheduler to e-mail the jobs every day:
+Also, run the scheduler and the worker to e-mail the jobs every day:
 
 ```sh
-$ rake jobs:daily 
+$ rake jobs:daily #add daily job 
+$ rake jobs:worker #run worker (should be kept running)
 ```
 _If we have to run this again, another job would get created so we may need to comment out the line:_
 
@@ -57,10 +58,8 @@ $ rspec spec
 * Write integration tests
 * Unsubscribe feature
 * Job feedback on subscribers screen
-* Add redis conf to application.yml
 * Add cucumber / user tests
 * Add performance test and update batch size and pool accordingly
-* Add simple auth to the admin stuff below
 
 ### Admin stuff
 At the moment is possible to delete and see the list of emails at
@@ -69,7 +68,7 @@ http://localhost:3000/subscribers
 and access the web interface for the queue system at:
 http://localhost:3000/jobs
 
-_There is no authentication to access those pages_
+_see application.example.yml and set your user/password in application.yml_
 
 License
 ----
