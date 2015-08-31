@@ -14,7 +14,7 @@ namespace :jobs do
     require 'qless/worker'
 
     # Create a client
-    DailyCached.qless
+    client = DailyCached.qless
 
     # Get the queue
     queue = client.queues[ENV['default_queue']]
@@ -41,7 +41,7 @@ namespace :jobs do
     require 'qless'
 
     # Create a client
-    DailyCached.qless
+    client = DailyCached.qless
 
     # Get the queue
     queue = client.queues[ENV['default_queue']]
