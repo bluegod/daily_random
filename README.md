@@ -2,6 +2,8 @@
 
 #### Fortune cookies in your e-mail, daily!
 
+**New!** Unsubscribe feature
+
 ### Version
 0.1 Beta
 
@@ -55,10 +57,8 @@ $ rspec spec
 
 ### Todo's
 
-* Write integration tests
-* Unsubscribe feature
+* Write more integration tests
 * Job feedback on subscribers screen
-* Add cucumber / user tests
 * Add performance test and update batch size and pool accordingly
 
 ### Admin stuff
