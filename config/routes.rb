@@ -58,6 +58,8 @@ Rails.application.routes.draw do
 
 
   resources :subscribers, :only => [:index, :create, :new, :destroy]
+  get 'unsubscribe/:email', to: 'subscribers#destroy', as: 'subscriber_with_token', :constraints  => { :email => /[0-z\.@_-]+/ }
+
   root 'subscribers#new'
   if !Rails.env.test?
     mount  Qless::Server.new(Qless::Client.new) => '/jobs'
