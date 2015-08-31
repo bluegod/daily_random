@@ -2,7 +2,7 @@ require 'rake'
 
 namespace :jobs do
   desc "Run a Qless worker"
-  task :daily => :environment do
+  task :worker => :environment do
     # Load your application code. All job classes must be loaded.
     require 'jobs/daily_quote_manager'
     require 'jobs/daily_sender'
@@ -38,8 +38,6 @@ namespace :jobs do
 
     # Require the parts of qless you need
     require 'qless'
-    require 'qless/job_reservers/ordered'
-    require 'qless/worker'
 
     # Create a client
     client = Qless::Client.new
