@@ -58,7 +58,6 @@ $ rspec spec
 ### Todo's
 
 * Write more integration tests
-* Job feedback on subscribers screen
 * Add performance test and update batch size and pool accordingly
 
 ### Admin stuff

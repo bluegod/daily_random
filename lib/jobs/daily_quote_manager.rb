@@ -10,7 +10,7 @@ class DailyQuoteManager
     Subscriber.find_in_batches(batch_size: ENV['batch_size'].to_i).with_index do |group, batch|
       Rails.logger.debug "Processing group ##{batch}"
       quotes = random_quote.get(group.size)
-      group.each {|sub| queue.put(sender_class, {email: sub.email, content: quotes.pop, token: sub.token})}
+      group.each {|sub| queue.put(sender_class, {email: sub.email, content: quotes.pop, token: sub.token}, jid: sub.email)}
     end
   end
 
