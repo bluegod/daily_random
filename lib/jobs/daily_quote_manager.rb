@@ -1,6 +1,7 @@
 require 'qless'
 require 'quotes/random_quote'
 require 'jobs/daily_sender'
+require 'config/daily_cached'
 
 class DailyQuoteManager
   #Added daily sender jobs to the queue in batches of subscribers
@@ -9,7 +10,7 @@ class DailyQuoteManager
     Subscriber.find_in_batches(batch_size: ENV['batch_size'].to_i).with_index do |group, batch|
       Rails.logger.debug "Processing group ##{batch}"
       quotes = random_quote.get(group.size)
-      group.each {|sub| queue.put(sender_class, {email: sub.email, content: quotes.pop, perform: ''})}
+      group.each {|sub| queue.put(sender_class, {email: sub.email, content: quotes.pop, token: sub.token}, jid: sub.email)}
     end
   end
 
@@ -22,7 +23,7 @@ class DailyQuoteManager
   end
 
   def self.client
-    @_client ||= Qless::Client.new
+    DailyCached.qless
   end
 end
 

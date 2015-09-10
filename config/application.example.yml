@@ -19,7 +19,10 @@ development:
   DEV_DB_PASSWORD: 'my_password'
   default_queue: 'test'
   batch_size: '20'
-
+  REDIS_URL: 'redis://127.0.0.1:6379'
+  #Possibly use a more sophisticated method instead of http_basic_authenticate_with in production.
+  ADMIN_USER: 'admin'
+  ADMIN_PASS: 'changeme'
 
 test:
   SECRET_KEY_BASE: 95a2c4c354c50b41aa0b5a98cb15f27e2e934299b38d0572024bc5a9b12f0591517c85ed8ae7cbdc2860b6cfaa82c2f51be4d1b00e0afe9691e4ef6ecc171955
@@ -28,3 +31,5 @@ test:
   TEST_DB_PASSWORD: 'my_password'
   default_queue: 'test'
   batch_size: '20'
+  ADMIN_USER: 'admin'
+  ADMIN_PASS: 'changeme'
