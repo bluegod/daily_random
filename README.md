@@ -34,13 +34,12 @@ Also, run the scheduler and the worker to e-mail the jobs every day:
 $ rake jobs:daily #add daily job 
 $ rake jobs:worker #run worker (should be kept running)
 ```
-_If we have to run this again, another job would get created so we may need to comment out the line:_
+_The scheduled time the job runs can also be changed. We could also delete the main scheduled job from the jobs page (see Admin section)_
 
 ```ruby
     #add recurring daily job
-    #queue.recur(DailyQuoteManager, {}, 3600*24)
+    queue.recur(DailyQuoteManager, {}, 3600*24) #update recurring time in seconds
 ```   
-_The time the job runs can also be changed. We could also delete the main scheduled job from the jobs page (see Admin section)_
 
 In another tab:
 ```sh
